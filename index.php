@@ -11,6 +11,7 @@
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <!--Google Fonts-->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@400;500;600&display=swap" rel="stylesheet"> 
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <!--Css file-->
@@ -32,7 +33,7 @@
         <div class="collapse navbar-collapse" id="collapsibleNavbar">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">About Us</a>
+                    <a class="nav-link" href="#aboutus">About Us</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Contact Us</a>
@@ -84,6 +85,15 @@
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="sr-only">Next</span>
             </a>
+        </div>
+    </div>
+    
+    <!-- About US -->
+    <div class="container">
+        <div class="col-lg-12 text-center introduction" id="aboutus">
+            <h1 class="mb-5">About US</h1>
+            <p>FGIC is a New York stock insurance corporation licensed under Article 69 of the New York Insurance Law.   FGIC emerged from its rehabilitation proceeding on August 19, 2013, and is required to conduct its business in accordance with the First Amended Plan of Rehabilitation for FGIC dated June 4, 2013.</p>
+            <p>Financial Guaranty Insurance Company (“FGIC”) may from time to time post documents related to selected legal proceedings in which it is a plaintiff.   FGIC is not undertaking an obligation to post all documents for the proceedings listed or an obligation to revise or update them to reflect changes in events or expectations.   FGIC makes no representation that the listed proceedings include all material proceedings in which it is a plaintiff.   The complete official court docket can be publicly accessed by contacting the clerk’s office of the respective court(s) where each litigation is pending. </p>
         </div>
     </div>
 

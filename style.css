@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: Roboto, sans-serif;
     font-size: 1em;
@@ -86,5 +90,49 @@ nav ul a:hover {
     .carousel-indicators li {
         width: 0.8vh;
         height: 0.8vh;
+    }
+}
+
+/* About US */
+
+.introduction {
+    margin-top: 10vh;
+    background-image: linear-gradient(90deg, rgb(139, 139, 139), rgb(206, 206, 54));
+    background-image: -o-linear-gradient(90deg, rgb(139, 139, 139), rgb(206, 206, 54));
+    background-image: -moz-linear-gradient(90deg, rgb(139, 139, 139), rgb(206, 206, 54));
+    background-image: -webkit-linear-gradient(90deg, rgb(139, 139, 139), rgb(206, 206, 54));
+    box-shadow: 0 0 6px #cccccc;
+    height: 60vh;
+    font-family: Sansita Swashed sans-serif;
+    overflow-y: hidden;
+    border-radius: 10px;
+    padding: 4px 10px;
+}
+
+.introduction h1 {
+    font-size: 3.5em;
+    margin-top: 7vh;
+}
+
+.introduction p {
+    font-size: 1.1em;
+    text-align: left;
+    font-weight: 500;
+}
+
+::selection {
+    background-color: #000000;
+    color: #ff0000;
+}
+
+@media only screen and (max-width:786px) {
+
+    .introduction h1 {
+        font-size: 2em;
+    }
+
+    .introduction p {
+        font-size: 0.8em;
+        font-weight: 800;
     }
 }
