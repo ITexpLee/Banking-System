@@ -1,0 +1,90 @@
+body {
+    font-family: Roboto, sans-serif;
+    font-size: 1em;
+}
+
+/* Navbar */
+
+
+
+#logo {
+    height: 50px;
+}
+
+nav {
+    opacity: 0.9;
+}
+
+nav li {
+    cursor: pointer;
+    font-size: 1.4em;
+}
+
+nav ul a {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+nav ul a:hover {
+    color: #ffffff;
+    transform: scale(1.1, 1.1);
+}
+
+@media only screen and (max-width:786px) {
+
+
+    #logo {
+        height: 40px;
+    }
+
+    nav ul li {
+        font-size: 0.8em;
+        color: red;
+    }
+
+    nav ul a:hover {
+        color: #ffffff;
+        transform: scale(0.9, 0.9);
+    }
+
+}
+
+/* Carousel */
+
+.carousel-item {
+    max-height: 70vh;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-caption {
+    color: #000000;
+    font-style: italic;
+    font-weight: 700;
+}
+
+.carousel-indicators li {
+    border-radius: 50%;
+    width: 1.2vh;
+    height: 1.2vh;
+    background-color: #000000;
+    margin: 0 4px;
+}
+
+@media only screen and (max-width:786px) {
+
+    .carousel-caption h5 {
+        font-size: 1em;
+    }
+
+    .carousel-caption p {
+        font-size: 0.8em;
+    }
+
+    .carousel-indicators li {
+        width: 0.8vh;
+        height: 0.8vh;
+    }
+}
