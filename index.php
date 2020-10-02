@@ -36,7 +36,7 @@
                     <a class="nav-link" href="#aboutus">About Us</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Contact Us</a>
+                    <a class="nav-link" href="#contactus">Contact Us</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Login</a>
@@ -89,14 +89,75 @@
     </div>
     
     <!-- About US -->
-    <div class="container">
-        <div class="col-lg-12 text-center introduction" id="aboutus">
+    <div class="container" id="aboutus">
+        <div class="col-lg-12 text-center introduction">
             <h1 class="mb-5">About US</h1>
             <p>FGIC is a New York stock insurance corporation licensed under Article 69 of the New York Insurance Law.   FGIC emerged from its rehabilitation proceeding on August 19, 2013, and is required to conduct its business in accordance with the First Amended Plan of Rehabilitation for FGIC dated June 4, 2013.</p>
             <p>Financial Guaranty Insurance Company (“FGIC”) may from time to time post documents related to selected legal proceedings in which it is a plaintiff.   FGIC is not undertaking an obligation to post all documents for the proceedings listed or an obligation to revise or update them to reflect changes in events or expectations.   FGIC makes no representation that the listed proceedings include all material proceedings in which it is a plaintiff.   The complete official court docket can be publicly accessed by contacting the clerk’s office of the respective court(s) where each litigation is pending. </p>
         </div>
     </div>
 
+    <!--contact us-->
+    
+    <div class="jumbotron jumbotron-fluid">
+            <div class="container" id="contactus">
+                <div class="row"><!--Online shoppping-->
+                    <div class="col-lg-3">
+                        <ul class="contact-list">
+                        <li class="list-head"><a href="#">ONLINE FACILITIES</a></li><br>
+                        <li class="list-item"><a href="#">Correspondent Banks</a></li>
+                        <li class="list-item"><a href="#">Email Statements</a></li>
+                        <li class="list-item"><a href="#">Generate Pin</a></li>
+                        <li class="list-item"><a href="#">Sms Facility</a></li>
+                        <li class="list-item"><a href="#">Phone Banking</a></li>
+                        <li class="list-item"><a href="#">Gift Cards</a></li>    
+                        <li class="list-item"><a href="#">Mobile Banking<span class="badge badge-danger badge-pill ml-2">New</span></a></li>    
+                        </ul>
+                    </div><!--Second List Online Shopping-->
+                    <div class="col-lg-2">
+                        <ul class="contact-list">
+                        <li class="list-head"><a href="#">Useful Links</a></li><br>
+                        <li class="list-item"><a href="#">Contact Us</a></li>
+                        <li class="list-item"><a href="#">Discounts & Offers</a></li>
+                        <li class="list-item"><a href="#">Holidays</a></li>
+                        <li class="list-item"><a href="#">Terms of Use</a></li>
+                        <li class="list-item"><a href="#">Key Financials</a></li>
+                        <li class="list-item"><a href="#">Rbi Advisory</a></li>    
+                        <li class="list-item"><a href="#">Cancellation</a></li>
+                        <li class="list-item"><a href="#">Returns</a></li>
+                        <li class="list-item"><a href="#">Press Room</a></li>
+                        <li class="list-item"><a href="#">Blog</a></li>
+                        <li class="list-item"><a href="#">Careers</a></li>    
+                        </ul>
+                    </div><!--App links & images -->
+                    <div class="col-lg-4">
+                        <ul class="contact-list"><!--Heading of App Links-->
+                            <li class="list-head"><a href="#">EXPERIENCE FGIC APP ON MOBILE</a></li>
+                        </ul><!--APP LINKS-->
+                        <ul class="app-link mt-n3"><br>
+                        <li><a href="#"><img src="socialmedia/googleplay.jpg" alt="PLAY LINK"/></a></li>
+                        <li><a href="#"><img src="socialmedia/appstore.jpg" alt="APP STORE"/></a></li>    
+                        </ul><!--Social Media-->
+                        <ul class="contact-list mt-4"> 
+                        <li class="list-head"><a href="#">KEEP IN TOUCH</a></li>
+                        </ul><!--LINKS-->
+                        <ul class="app-link mt-n1">
+                        <span class="fa fa-facebook-official"></span>
+                        <span class="fab fa-twitter"></span>
+                        <span class="fab fa-youtube"></span>
+                        <span class="fab fa-instagram"></span>    
+                        </ul>
+                    </div><!--30 days policy -->
+                    <div class="col-lg-3">
+                        <ul class="policy mt-4" style="list-style: none;word-spacing: 1px;letter-spacing: 0.5px;">
+                            <li><img src="socialmedia/original.jpg" alt="original"/><b> 100% ORIGINAL</b> gurantee<br> for all products at myntra.com</li>
+                            <li class="mt-4"><img src="socialmedia/return.jpg" alt="30 days return"/><b> Return within 30days</b> of<br> receiving your order</li>
+                            <li class="mt-4"><img src="socialmedia/freedelivery.jpg" alt="free delivery"/><b> Get free delivery</b> for every<br> order above Rs. 1199</li>
+                        </ul>
+                    </div>
+                </div>    
+            </div>
+        </div>
     <!--Script files-->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
