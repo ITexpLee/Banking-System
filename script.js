@@ -16,8 +16,6 @@ function showPage() {
 
 $(function () {
     if ($(window).width() > 786) {
-        var x = $(window).width();
-        window.console.log(x);
         $(window).scroll(function () {
             if ($(document).scrollTop() > 40) {
                 $('#aboutus').fadeIn(4000);
