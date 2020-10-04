@@ -9,8 +9,6 @@ body {
 
 /* Navbar */
 
-
-
 #logo {
     height: 50px;
 }
@@ -53,6 +51,10 @@ nav ul a:hover {
     nav ul a:active {
         color: #ffffff;
         transform: scale(1.1, 1.1);
+    }
+
+    .animate-bottom ul {
+        float: left !important;
     }
 
 }
@@ -297,6 +299,7 @@ nav ul a:hover {
 }
 
 /* Add animation to "page content" */
+
 .animate-bottom {
     position: relative;
     -webkit-animation-name: animatebottom;
@@ -327,4 +330,58 @@ nav ul a:hover {
         bottom: 0;
         opacity: 1
     }
+}
+
+/* Customers card */
+
+#customers {
+    margin-top: 20vh;
+    padding-left: 50px;
+    font-family: Sansita Swashed sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: linear-gradient(to left,
+            rgba(7, 27, 82, 1) 0%,
+            rgba(0, 128, 128, 1) 100%);
+    box-shadow: 0 0 5px #ccc;
+    border-radius: 5px;
+}
+
+.card-deck .card {
+    background-color: #95dada;
+    border: 1px solid grey;
+    border-radius: 5px;
+    cursor: pointer;
+    -moz-osx-font-smoothing: grayscale;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+    transition: transform 0.25s ease-out;
+    width: 180px;
+    break-inside: avoid-column;
+}
+
+.card-deck .card:hover {
+    transform: scale(1.05);
+}
+
+.card-body h4,
+.card-text {
+    font-size: 1em;
+}
+
+@media only screen and (max-width:574px) {
+
+    .card-deck img {
+        width: 60vw;
+    }
+
+    .card-deck .card {
+        width: 60vw;
+    }
+
+    .card-body h4,
+    .card-text {
+        font-size: 0.8em;
+    }
+
 }

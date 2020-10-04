@@ -8,7 +8,8 @@ function spinner() {
 function showPage() {
     document.getElementById("loader").style.display = "none";
     document.getElementById("loadtext").style.display = "none";
-    document.getElementById("navbar").style.display = "block";
+    document.getElementById("head").style.display = "block";
+    document.getElementById("customers").style.display = "flex";
 }
 
 

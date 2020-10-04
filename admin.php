@@ -4,7 +4,9 @@
 
 include 'connection.php';
 
+//fetch component from component.php
 
+require 'component.php';
 
 ?>
 <!DOCTYPE html>
@@ -37,17 +39,53 @@ include 'connection.php';
     <div id="loadtext">Loading please Wait...</div>
 
     <!--Navigation Bar-->
-    <nav role="navigation" class="navbar navbar-expand-md bg-dark navbar-dark py-0 animate-bottom" id="navbar" style="display: none;">
-        <!-- Brand -->
-        <a class="navbar-brand" href="index.php"><img src="assests\logo.gif" id="logo"></a>
+    <header style="display: none;" id="head">
+        <nav role="navigation" class="navbar navbar-expand-sm bg-dark navbar-dark py-0 animate-bottom" id="navbar">
+            <!-- Brand -->
+            <a class="navbar-brand" href="index.php"><img src="assests\logo.gif" id="logo"></a>
 
-        <!-- Navbar links -->
-        <ul class="navbar-nav float-right mt-1">
-            <li class="nav-item">
-                <a class="nav-link" href="#"><i class="fas fa-user-tie text-success"></i> Logged as Admin</a>
-            </li>
-        </ul>
-    </nav>
+            <!-- Toggler/collapsibe Button -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navbar links -->
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav mt-1 ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="admin.php">Customers</a>
+                    </li>
+                    <li class="nav-item mr-1">
+                        <a class="nav-link" href="#">Transfer</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-user-tie text-success"></i> Logged as Admin</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- container for customers-->
+
+    <div class="container animate-bottom text-center" id="customers" style="display:none;">
+        <div class="card-deck">
+            <?php
+            //Get customers from Database
+            $sql = "SELECT * FROM customers";
+            $result = mysqli_query($conn, $sql);
+            if (!$result) {
+                echo "<div class='alert alert-danger'>There was error fetching product Data<div>";
+            }
+            if (mysqli_num_rows($result) > 0) {
+                while ($row = mysqli_fetch_assoc($result)) {
+                    customers($row['first_name'], $row['last_name'], $row['account_no'], $row['balance'], $row['cust_id']);
+                }
+            }
+
+            ?>
+        </div>
+    </div>
 
     <!--Script files-->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
