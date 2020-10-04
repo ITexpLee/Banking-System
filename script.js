@@ -9,7 +9,9 @@ function showPage() {
     document.getElementById("loader").style.display = "none";
     document.getElementById("loadtext").style.display = "none";
     document.getElementById("head").style.display = "block";
+    document.getElementById("passbook").style.display = "grid";
     document.getElementById("customers").style.display = "flex";
+
 }
 
 

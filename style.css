@@ -385,3 +385,20 @@ nav ul a:hover {
     }
 
 }
+
+/* Passbook */
+
+#passbook {
+    margin-top: 20vh;
+    box-shadow: #ccc 0 0 5px;
+    background-color: #fff;
+    font-family: Sansita Swashed sans-serif;
+}
+
+#passbook h5 {
+    font-size: 1.4em;
+}
+
+#passbook p {
+    font-size: 1.2em;
+}

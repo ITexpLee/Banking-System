@@ -87,6 +87,36 @@ require 'component.php';
         </div>
     </div>
 
+    <!-- Passbook -->
+
+    <div class="container">
+        <div class="row">
+            <div class="offset-md-2 col-md-8 col-sm-10 text-center" id="passbook" style="display: none;">
+                <?php
+
+                if (isset($_POST['view'])) {
+
+                    $id = $_POST['cust_id'];
+                    //Select customer from Database
+
+                    $sql = "SELECT * FROM customers WHERE cust_id='$id'";
+                    $result = mysqli_query($conn, $sql);
+
+                    if (!$result) {
+                        echo "<div class='alert alert-danger'>There was error fetching product Data<div>";
+                    }
+                    if (mysqli_num_rows($result) > 0) {
+                        while ($row = mysqli_fetch_assoc($result)) {
+                            modal($row['first_name'], $row['last_name'], $row['account_no'], $row['gender'], $row['email'], $row['phone_no'], $row['balance'], $row['cust_id']);
+                        }
+                    }
+                }
+                ?>
+            </div>
+        </div>
+    </div>
+
+
     <!--Script files-->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
     </script>
