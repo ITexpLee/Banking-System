@@ -53,7 +53,7 @@ require 'component.php';
             <div class="collapse navbar-collapse" id="collapsibleNavbar">
                 <ul class="navbar-nav mt-1 ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="admin.php">Customers</a>
+                        <a class="nav-link active" href="admin.php">All Customers</a>
                     </li>
                     <li class="nav-item mr-1">
                         <a class="nav-link" href="#">Transfer</a>
@@ -91,7 +91,7 @@ require 'component.php';
 
     <div class="container">
         <div class="row">
-            <div class="offset-md-2 col-md-8 col-sm-10 text-center" id="passbook" style="display: none;">
+            <div class="offset-md-2 col-md-8 col-sm-10" id="passbook" style="display: none;">
                 <?php
 
                 if (isset($_POST['view'])) {

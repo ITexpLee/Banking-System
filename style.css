@@ -390,15 +390,81 @@ nav ul a:hover {
 
 #passbook {
     margin-top: 20vh;
+    margin-bottom: 5vh;
+    height: 40vh;
+    padding: 20px 30px;
     box-shadow: #ccc 0 0 5px;
-    background-color: #fff;
+    border-radius: 10px;
+    background-image: linear-gradient(90deg, #FCC201, #DC9202);
+    background-image: -o-linear-gradient(90deg, #FCC201, #DC9202);
+    background-image: -moz-linear-gradient(90deg, #FCC201, #DC9202);
+    background-image: -webkit-linear-gradient(90deg, #FCC201, #DC9202);
     font-family: Sansita Swashed sans-serif;
 }
 
-#passbook h5 {
-    font-size: 1.4em;
+img#card-logo {
+    width: 100px;
+    height: 40px;
+
 }
 
-#passbook p {
-    font-size: 1.2em;
+.fa-wifi {
+    float: right;
+    font-size: 1.4em;
+    transform: rotate(90deg);
+}
+
+img#card-chip {
+    width: 120px;
+    height: 80px;
+}
+
+#passbook h4 {
+    text-transform: uppercase;
+    font-size: 1.8em;
+    color: rgb(255, 242, 181);
+    background-image: linear-gradient(rgb(177, 175, 168) 28%,
+            rgb(82, 80, 80) 40%,
+            rgb(155, 141, 82) 54%);
+    text-align: center;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 1.2em;
+}
+
+#passbook h5 {
+    font-size: 1.6em;
+    text-transform: uppercase;
+    color: rgb(255, 242, 181);
+    background-image: linear-gradient(rgb(177, 175, 168) 28%,
+            rgb(82, 80, 80) 40%,
+            rgb(155, 141, 82) 54%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#passbook p.d-inline {
+    font-size: 1.4em;
+    text-transform: uppercase;
+    color: rgb(255, 242, 181);
+    background-image: linear-gradient(rgb(177, 175, 168) 28%,
+            rgb(82, 80, 80) 40%,
+            rgb(155, 141, 82) 54%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@media only screen and (max-width:786px) {
+
+    #passbook h4 {
+        font-size: 1.2em;
+        letter-spacing: 0.6em;
+    }
+
+    #passbook h5 {
+        font-size: 1.1em;
+    }
 }

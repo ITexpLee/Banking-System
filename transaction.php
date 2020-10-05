@@ -103,7 +103,8 @@ require 'component.php';
 
                 //Insert Transaction into the transaction Table
 
-                echo "successfully done";
+                echo "<div class='alert alert-success mx-auto'>Transaction of $amount done successfully. Please wait while the page is Redirected :)</div>";
+                header("refresh:5;url=http://localhost/My%20Projects/Banking-System/index.php");
             }
 
 

@@ -1,4 +1,5 @@
 //Once form is submitted
+
 //Profile Form
 $(document).ready(function () {
     $("#profileform").submit(function (event) {
@@ -23,6 +24,7 @@ $(document).ready(function () {
 });
 
 //Transaction form
+
 $(document).ready(function () {
     $("#transactionform").submit(function (event) {
         event.preventDefault();
