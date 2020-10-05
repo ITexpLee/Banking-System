@@ -42,6 +42,7 @@ require 'component.php';
                 $sender_id = $_POST['sender_id'];
                 $sender_balance = $_POST['balance'];
                 $amount = $_POST['amount'];
+                $sender_account = $_POST['sender_account'];
 
                 //Print all possible Receivers
 
@@ -53,7 +54,7 @@ require 'component.php';
                 }
                 if (mysqli_num_rows($result) > 0) {
                     while ($row = mysqli_fetch_assoc($result)) {
-                        Receivers($row['first_name'], $row['last_name'], $row['account_no'], $row['balance'], $row['cust_id'], $sender_id, $sender_balance, $amount);
+                        Receivers($row['first_name'], $row['last_name'], $row['account_no'], $row['balance'], $row['cust_id'], $sender_id, $sender_balance, $amount, $sender_account);
                     }
                 }
             }
@@ -66,11 +67,13 @@ require 'component.php';
                 $sender_id = $_POST['sender_id'];
                 $sender_balance = $_POST['sender_balance'];
                 $amount = $_POST['amount'];
+                $sender_account = $_POST['sender_account'];
 
                 //Get Receivers Info
 
                 $receiver_id = $_POST['receiver_id'];
                 $receiver_balance = $_POST['balance1'];
+                $receiver_account = $_POST['receiver_account'];
 
                 //New Balance of Sender 
                 if (!($sender_balance > $amount)) {
@@ -102,6 +105,15 @@ require 'component.php';
                 }
 
                 //Insert Transaction into the transaction Table
+
+                $sql = "INSERT INTO transaction (sender_account, Amount, receiver_account) VALUES
+                        ('$sender_account', '$amount', '$receiver_account')";
+
+                $result = mysqli_query($conn, $sql);
+                if (!$result) {
+                    echo "<div class='alert alert-danger text-center'>There was an error in keeping Transactions Data from $sender_account to $receiver_account</div>";
+                    exit();
+                }
 
                 echo "<div class='alert alert-success mx-auto'>Transaction of $amount done successfully. Please wait while the page is Redirected :)</div>";
                 header("refresh:5;url=http://localhost/My%20Projects/Banking-System/index.php");

@@ -24,7 +24,7 @@ $(function () {
                 $('#aboutus').fadeIn(4000);
             }
             if ($(document).scrollTop() > 200) {
-                $('.jumbotron').css('width', '100vw');
+                $('.jumbotron').css('width', '100%');
             }
         });
     }

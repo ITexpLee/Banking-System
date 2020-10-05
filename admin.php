@@ -56,7 +56,7 @@ require 'component.php';
                         <a class="nav-link active" href="admin.php">All Customers</a>
                     </li>
                     <li class="nav-item mr-1">
-                        <a class="nav-link" href="#">Transfer</a>
+                        <a class="nav-link" href="history.php">Transactions</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#"><i class="fas fa-user-tie text-success"></i> Logged as Admin</a>
@@ -107,7 +107,7 @@ require 'component.php';
                     }
                     if (mysqli_num_rows($result) > 0) {
                         while ($row = mysqli_fetch_assoc($result)) {
-                            modal($row['first_name'], $row['last_name'], $row['account_no'], $row['gender'], $row['email'], $row['phone_no'], $row['balance'], $row['cust_id']);
+                            modal($row['first_name'], $row['last_name'], $row['account_no'], $row['balance'], $row['cust_id']);
                         }
                     }
                 }

@@ -20,7 +20,7 @@ function customers($firstname, $lastname, $account_no, $balance, $cust_id)
 
 //Passbook Component
 
-function modal($firstname, $lastname, $account_no, $gender, $email, $phone_no, $balance, $cust_id)
+function modal($firstname, $lastname, $account_no, $balance, $cust_id)
 {
     $element2 = ' <form method="post" action="transaction.php">
                  <p><img src="assests/logo.gif" alt="Bank-logo" id="card-logo"><span class="fas fa-wifi"></span></p> 
@@ -30,6 +30,7 @@ function modal($firstname, $lastname, $account_no, $gender, $email, $phone_no, $
                  <p class="d-inline">&#8377;' . $balance . ' </p>
                  <input type="hidden" name="sender_id" value=' . $cust_id . '>
                  <input type="hidden" name="balance" value=' . $balance . '>
+                 <input type="hidden" name="sender_account" value=' . $account_no . '>
                  <p class="float-right"><input type="number" name="amount">
                  <button type="submit" class="btn btn-outline-danger" name="transfer">Transfer</button></p>
                  </form>
@@ -40,7 +41,7 @@ function modal($firstname, $lastname, $account_no, $gender, $email, $phone_no, $
 
 //Functional Component for Receivers
 
-function Receivers($firstname, $lastname, $account_no, $balance, $cust_id, $sender_id, $sender_balance, $amount)
+function Receivers($firstname, $lastname, $account_no, $balance, $cust_id, $sender_id, $sender_balance, $amount, $sender_account)
 {
     $element = '<form id="transactionform" method="post">
                 <div class="card text-center mt-3">
@@ -48,12 +49,14 @@ function Receivers($firstname, $lastname, $account_no, $balance, $cust_id, $send
                     <div class="card-body">
                         <h4 class="card-title">' . $firstname . ' ' . $lastname . '</h4>
                         <p class="card-text">Account No: ' . $account_no . '<br> Balance: &#8377;' . $balance . '</p>
-                        <button type="submit" class="btn btn-outline-warning my-3" name="receive">Send</button>
+                        <button type="submit" class="btn btn-outline-danger my-3" name="receive">Send</button>
                         <input type="hidden" name="sender_id" value=' . $sender_id . '>
                         <input type="hidden" name="sender_balance" value=' . $sender_balance . '>
+                        <input type="hidden" name="sender_account" value = ' . $sender_account . '>
                         <input type="hidden" name="amount" value=' . $amount . '>
                         <input type="hidden" name="receiver_id" value=' . $cust_id . '>
                         <input type="hidden" name="balance1" value=' . $balance . '>
+                        <input type="hidden" name="receiver_account" value=' . $account_no . '>
                     </div>
                 </div>
             </form>';
