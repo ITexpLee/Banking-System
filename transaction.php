@@ -30,7 +30,7 @@ require 'component.php';
 
 <body>
     <div id="successmessage" class="alert alert-success"></div>
-    <div class="container text-center">
+    <div class="container text-center animation-bottom" id="customers">
         <div class="card-deck">
             <?php
 
@@ -106,8 +106,8 @@ require 'component.php';
 
                 //Insert Transaction into the transaction Table
 
-                $sql = "INSERT INTO transaction (sender_account, Amount, receiver_account) VALUES
-                        ('$sender_account', '$amount', '$receiver_account')";
+                $sql = "INSERT INTO transaction (sender_account, Amount, receiver_account, transaction_time) VALUES
+                        ('$sender_account', '$amount', '$receiver_account', Now())";
 
                 $result = mysqli_query($conn, $sql);
                 if (!$result) {
@@ -115,7 +115,7 @@ require 'component.php';
                     exit();
                 }
 
-                echo "<div class='alert alert-success mx-auto'>Transaction of $amount done successfully. Please wait while the page is Redirected :)</div>";
+                echo "<div class='alert alert-success mx-auto'>Transaction of $amount from $sender_account to $receiver_account is done successfully. Please wait while the page is Redirected :)</div>";
                 header("refresh:5;url=http://localhost/My%20Projects/Banking-System/index.php");
             }
 
